@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
         libicu-dev \
         libxml2-dev \
         libpq-dev \
-        libzip-dev && \      # Add this line to install libzip
+        libzip-dev && \
     docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && \
     docker-php-ext-install pdo pdo_mysql pdo_pgsql zip intl xmlrpc soap opcache && \
     docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd && \
